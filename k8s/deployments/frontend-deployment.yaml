@@ -22,4 +22,4 @@ spec:
         - containerPort: 3000
         env:
         - name: API_ENDPOINT
-          value: "http://backend-service:3001"    # (placeholder, backend comes later)
+          value: "http://k8s.local/api"    # (placeholder, backend comes later)

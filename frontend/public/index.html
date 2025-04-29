@@ -50,13 +50,16 @@
 
   <script>
     fetch('/config')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('api-endpoint').innerText = "API Endpoint: " + data.apiEndpoint;
-      })
-      .catch(error => {
-        document.getElementById('api-endpoint').innerText = "Failed to load API config.";
-      });
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('api-endpoint').innerText =
+      `✅ ${data.message} (via ${data.apiEndpoint})`;
+  })
+  .catch(error => {
+    document.getElementById('api-endpoint').innerText =
+      "❌ Failed to load API config.";
+  });
+
   </script>
 </body>
 </html>
