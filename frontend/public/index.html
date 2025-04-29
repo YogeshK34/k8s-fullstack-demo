@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kubernetes Fullstack Demo</title>
+</head>
+<body>
+  <h1>Hello from Kubernetes Fullstack App!</h1>
+  <p id="api-endpoint"></p>
+
+  <script>
+    fetch('/config')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('api-endpoint').innerText = "API Endpoint: " + data.apiEndpoint;
+      });
+  </script>
+</body>
+</html>
